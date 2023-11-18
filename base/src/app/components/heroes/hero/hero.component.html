@@ -1,0 +1,42 @@
+<div class="hero">
+  <p class="hero__title">{{ name }}</p>
+  <div class="hero__container">
+    <dl>
+      <div class="hero__containerLabel">
+        <dt>Name:</dt>
+        <dd>{{ name }}</dd>
+      </div>
+
+      <div class="hero__containerLabel">
+        <dt>Age:</dt>
+        <dd>{{ age }}</dd>
+      </div>
+
+      <div class="hero__containerLabel">
+        <dt>Method:</dt>
+        <dd>{{ getHeroDescription }}</dd>
+      </div>
+
+      <div class="hero__containerLabel">
+        <dt>Capitalized:</dt>
+        <dd>{{ getCapitalizedName }}</dd>
+      </div>
+    </dl>
+    <div class="hero__containerButton">
+      @if (name.toLocaleLowerCase() !== 'spiderman') {
+      <button (click)="changeAge()" class="hero__button hero__button--primary">
+        Change Age
+      </button>
+      }
+
+      <button
+        (click)="changedHero()"
+        class="hero__button hero__button--primary"
+      >
+        Change Name
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-list />

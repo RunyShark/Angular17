@@ -1,0 +1,83 @@
+.hero {
+  user-select: none;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 50vw;
+  cursor: pointer;
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__containerLabel {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+
+    dt {
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  &__containerButton {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border-radius: 3px;
+    height: 30px;
+    width: 100px;
+    background: orange;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+
+    &--primary {
+      background: rgba(84, 84, 218, 0.5);
+      &:hover {
+        background: rgba(84, 84, 218, 0.9);
+      }
+    }
+
+    &--secondary {
+      background: rgba(84, 178, 218, 0.5);
+      &:hover {
+        background: rgba(84, 178, 218, 0.9);
+      }
+    }
+
+    &--tertiary {
+      background: rgba(84, 218, 124, 0.5);
+      &:hover {
+        background: rgba(84, 218, 124, 0.9);
+      }
+    }
+  }
+}

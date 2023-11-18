@@ -1,0 +1,23 @@
+<div class="counter">
+  <h4 class="counter__title">counter: {{ counter }}</h4>
+  <div class="counter__containerButtons">
+    <button
+      (click)="increaseBy(+1)"
+      class="counter__button counter__button--primary"
+    >
+      +1
+    </button>
+    <button
+      (click)="resetCounter()"
+      class="counter__button counter__button--secondary"
+    >
+      reset
+    </button>
+    <button
+      (click)="increaseBy(-1)"
+      class="counter__button counter__button--tertiary"
+    >
+      -1
+    </button>
+  </div>
+</div>

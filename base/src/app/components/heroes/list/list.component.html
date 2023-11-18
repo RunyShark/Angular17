@@ -1,0 +1,17 @@
+@if(nameHeroDelete.length) {
+<h3>
+  Last Hero Delete: <small>{{ nameHeroDelete }}</small>
+</h3>
+} @else if(!nameHeroDelete.length) {
+<h3>Is not Hero Delete</h3>
+} @if(heroNames.length) {
+<button (click)="deleteLastHero()" class="list__button list__button--secondary">
+  Delete last hero
+</button>
+}
+
+<ul>
+  @for (name of heroNames; track name) {
+  <li>{{ name }}</li>
+  }
+</ul>

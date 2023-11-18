@@ -1,0 +1,38 @@
+.list {
+  &__button {
+    all: unset;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border-radius: 3px;
+    height: 30px;
+    width: 100px;
+    background: orange;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+
+    &--primary {
+      background: rgba(84, 84, 218, 0.5);
+      &:hover {
+        background: rgba(84, 84, 218, 0.9);
+      }
+    }
+
+    &--secondary {
+      background: rgba(84, 178, 218, 0.5);
+      &:hover {
+        background: rgba(84, 178, 218, 0.9);
+      }
+    }
+
+    &--tertiary {
+      background: rgba(84, 218, 124, 0.5);
+      &:hover {
+        background: rgba(84, 218, 124, 0.9);
+      }
+    }
+  }
+}
