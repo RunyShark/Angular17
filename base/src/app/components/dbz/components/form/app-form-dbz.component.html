@@ -1,0 +1,27 @@
+<form action="row" (ngSubmit)="emitCharacter()">
+  <div>
+    <input
+      type="text"
+      placeholder="Name"
+      class="form-control mb-2"
+      name="name"
+      [(ngModel)]="character.name"
+    />
+    @if(errorForm.name) {
+    <label style="color: red">The name is required</label>
+    }
+  </div>
+  <div>
+    <input
+      type="number"
+      placeholder="Power "
+      class="form-control mb-2"
+      name="power"
+      [(ngModel)]="character.power"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary w-100">Add</button>
+
+  <pre> {{ character | json }} </pre>
+</form>

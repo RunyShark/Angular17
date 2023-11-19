@@ -1,0 +1,14 @@
+<h1>DBZ</h1>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <app-list-dbz
+      [charactersList]="characters()"
+      (onRemoveCharacter)="removerCharacter($event)"
+    ></app-list-dbz>
+  </div>
+  <div class="col">
+    <app-form-dbz (onNewCharacter)="onNewCharacter($event)"></app-form-dbz>
+  </div>
+</div>
