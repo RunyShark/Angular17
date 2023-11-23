@@ -4,6 +4,8 @@ export interface SearchResponse {
   meta: Meta;
 }
 
+export interface GiftResult extends Pick<Gift, 'id' | 'title' | 'images'> {}
+
 export interface Gift {
   type: Type;
   id: string;

@@ -4,7 +4,10 @@
   <div class="list-group list-reset">
     @for (item of getTagsHistory(); track $index) {
 
-    <button class="list-group-item list-group-item-action">
+    <button
+      class="list-group-item list-group-item-action"
+      (click)="this.historySearch(item)"
+    >
       {{ item | titlecase }}
     </button>
 

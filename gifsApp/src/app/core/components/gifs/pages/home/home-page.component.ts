@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { GifsService } from '../../service/gifs.service';
-import { Gift } from '../../service/interface';
+import { Gift, GiftResult } from '../../service/interface';
 
 @Component({
   selector: 'gifs-home-page',
@@ -9,7 +9,7 @@ import { Gift } from '../../service/interface';
 export class HomeComponent {
   constructor(private readonly gifsService: GifsService) {}
 
-  get gifs(): Gift[] {
+  get gifs(): GiftResult[] {
     return this.gifsService.geGifs;
   }
 }

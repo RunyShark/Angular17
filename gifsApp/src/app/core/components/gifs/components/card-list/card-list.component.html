@@ -1,9 +1,16 @@
 <div class="row">
+  @for (item of gifs; track $index) {
   <div class="col-md-3 col-sm-6">
     <div class="text-center card mb-2 bg-dark">
       <div class="card-body text-white">
-        <p class="card-text">Hello world</p>
+        <p class="card-text">{{ item.title }}</p>
+        <img
+          class="img-fluid"
+          src="{{ item.images.original.url }}"
+          alt="{{ item.id }}"
+        />
       </div>
     </div>
   </div>
+  }
 </div>

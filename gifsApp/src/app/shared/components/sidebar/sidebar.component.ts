@@ -10,6 +10,10 @@ import { GifsService } from '../../../core/components/gifs/service/gifs.service'
 export class SidebarComponent {
   constructor(private readonly gifsService: GifsService) {}
 
+  historySearch(tag: string): void {
+    this.gifsService.searchTag(tag);
+  }
+
   getTagsHistory(): string[] {
     return this.gifsService.geTagsHistory;
   }
